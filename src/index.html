@@ -7,8 +7,27 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
   <app-root></app-root>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCyYfpAvvD6brbM8g7yJNRCAhxs2-rEW4Y",
+	    authDomain: "siologic-dev.firebaseapp.com",
+	    databaseURL: "https://siologic-dev.firebaseio.com",
+	    projectId: "siologic-dev",
+	    storageBucket: "siologic-dev.appspot.com",
+	    messagingSenderId: "42811579316"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+  <script src="./assets/js/functions-min.js"></script>
 </body>
 </html>

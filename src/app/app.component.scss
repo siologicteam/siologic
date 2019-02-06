@@ -1,0 +1,18 @@
+.header--logo p {
+  margin: 0 0 0 10px;
+  letter-spacing: 2px;
+  font-size: 48px !important;
+  font-weight: 700;
+   text-transform: initial !important;
+}
+
+.logo-img{
+  width: 50px;
+  filter: opacity(.7);
+  transition: all .2s linear;
+
+  &:hover{
+    transition: all .2s linear;
+    filter: opacity(1);
+  }
+}
