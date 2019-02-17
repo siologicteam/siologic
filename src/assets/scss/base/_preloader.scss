@@ -1,0 +1,82 @@
+$dark: #383a63;
+$dark-light: #415782;
+$light: #B1CCDA;
+
+.loader-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transition: all .25s linear;
+
+  &.none{
+    transition: all .25s linear;
+    //animation: .5s pulse1;
+    opacity: 0;
+  }
+}
+
+.loader {
+  width: 280px;
+  height: 250px;
+
+  svg {
+    shape-rendering: geometricPrecision;
+  }
+}
+
+.loader__shape {
+  fill: $light;
+  animation: 1.5s ease .6s pulse infinite;
+  opacity: 0;
+  stroke: $light;
+
+  &:first-child {
+    fill: $dark;
+    stroke: $dark;
+  }
+  &:nth-child(3) {
+    fill: $dark-light;
+    stroke: $dark-light;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes pulse1 {
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0.5
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@for $i from 1 through 6 {
+  .loader__shape {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 120ms;
+    }
+  }
+}
