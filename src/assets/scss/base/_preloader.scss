@@ -33,18 +33,18 @@ $light: #B1CCDA;
 }
 
 .loader__shape {
-  fill: $light;
+  fill: $dark-light;
   animation: 1.5s ease .6s pulse infinite;
   opacity: 0;
-  stroke: $light;
+  stroke: $dark-light;
 
   &:first-child {
     fill: $dark;
     stroke: $dark;
   }
   &:nth-child(3) {
-    fill: $dark-light;
-    stroke: $dark-light;
+    fill: $light;
+    stroke: $light;
   }
 }
 
@@ -58,22 +58,8 @@ $light: #B1CCDA;
   }
 }
 
-@keyframes pulse1 {
-  0% {
-    opacity: 1
-  }
 
-  50% {
-    opacity: 0.5
-  }
-
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-
-@for $i from 1 through 6 {
+@for $i from 1 through 3 {
   .loader__shape {
     &:nth-child(#{$i}) {
       animation-delay: $i * 120ms;

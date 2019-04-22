@@ -5,6 +5,8 @@
   overflow: hidden;
   transition: all .25s linear;
   z-index: 10;
+  font-family: 'Iceland', cursive;
+  background-color: rgba(0, 0, 0, .94);
 
   &.none{
     opacity: 0;
@@ -21,7 +23,7 @@
   position: relative;
   transform: translateZ(0) translateX(0) rotateY(0deg);
   min-height: 100%;
-  outline: 30px solid $highlight;
+  outline: 20px solid $highlight;
   transition: transform .4s;
 }
 
@@ -46,7 +48,7 @@
   &--animate{
     .container{
       transform: translateX(-55%) rotateY(30deg);
-      outline: 30px solid $highlight;
+      outline: 20px solid $highlight;
     }
   }
 }
@@ -105,11 +107,11 @@
     &::before{
       content: "";
       position: absolute;
-      top: 50%;
+      top: 80%;
       left: 50%;
       transform: translate(-50%, -25%);
       width: 110%;
-      height: 15px;
+      height: 5px;
       opacity: 0;
       background-color: $highlight;
     }
