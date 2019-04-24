@@ -1,18 +1,28 @@
-<mat-sidenav-container
-  class="example-container" (backdropClick)="close('backdrop')">
-  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-    <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.open()">Open</button></p>
-    <p>Closed due to: {{reason}}</p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-<!--<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>-->
-
-
-<!-- Copyright 2019 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->
+<div class="sidebar-panel">
+  <div class="title-sidebar">
+    <img [src]="'../../../assets/img/LogoBig.png'" alt="Logo">
+    <p>Siologic</p>
+  </div>
+  <ul class="sidebar-links-items">
+    <li *ngFor="let page of routesData">
+      <a [routerLink]="page?.path" routerLinkActive="active">
+        {{ page?.title }}
+      </a>
+    </li>
+    <li *ngFor="let page of routesData">
+      <a [routerLink]="page?.path">
+        {{ page?.title }}
+      </a>
+    </li>
+    <li *ngFor="let page of routesData">
+      <a [routerLink]="page?.path">
+        {{ page?.title }}
+      </a>
+    </li>
+    <li *ngFor="let page of routesData">
+      <a [routerLink]="page?.path">
+        {{ page?.title }}
+      </a>
+    </li>
+  </ul>
+</div>

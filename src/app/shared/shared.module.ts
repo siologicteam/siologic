@@ -55,6 +55,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -110,6 +111,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+    RouterModule,
   ],
   exports: [
     FormsModule,
