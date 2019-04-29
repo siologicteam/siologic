@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { ClientRoutingModule } from './client-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { ClientComponent } from './client.component';
+import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ClientComponent, ClientDashboardComponent],
   imports: [
     CommonModule,
     ClientRoutingModule,

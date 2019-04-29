@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { DevelopRoutingModule } from './develop-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { DevelopComponent } from './develop.component';
+import { DevelopDashboardComponent } from './develop-dashboard/develop-dashboard.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [DevelopComponent, DevelopDashboardComponent],
   imports: [
     CommonModule,
     DevelopRoutingModule,

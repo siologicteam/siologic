@@ -1,49 +1,33 @@
 import { Injectable } from '@angular/core';
-import { ISidebarInterface } from '../interfaces/sidebar.interface';
+import { RouteInfo } from '../interfaces/sidebar.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService {
 
-  public sidebarSuperAdmin: ISidebarInterface[] = [
-    {
-      url: '/super-admin/dashboard',
-      title: 'Dashboard',
-      icon: ''
-    }
+  public sidebarSuperAdmin: RouteInfo[] = [
+    { path: '/super-admin/dashboard', title: 'Dashboard',  icon: 'dashboard', className: '' },
+    { path: '/super-admin/admins', title: 'Admins',  icon: 'people', className: '' },
+    { path: '/super-admin/clients', title: 'Clients',  icon: 'people', className: '' },
+    { path: '/super-admin/managers', title: 'Managers',  icon: 'people', className: '' },
+    { path: '/super-admin/developers', title: 'Developers',  icon: 'people', className: '' },
   ];
 
-  public sidebarAdmin: ISidebarInterface[] = [
-    {
-      url: '/admin/dashboard',
-      title: 'Dashboard',
-      icon: ''
-    }
+  public sidebarAdmin: RouteInfo[] = [
+    { path: '/admin/dashboard', title: 'Dashboard',  icon: 'dashboard', className: '' },
   ];
 
-  public sidebarClient: ISidebarInterface[] = [
-    {
-      url: '/client/dashboard',
-      title: 'Dashboard',
-      icon: ''
-    }
+  public sidebarClient: RouteInfo[] = [
+    { path: '/client/dashboard', title: 'Dashboard',  icon: 'dashboard', className: '' },
   ];
 
-  public sidebarManager: ISidebarInterface[] = [
-    {
-      url: '/manager/dashboard',
-      title: 'Dashboard',
-      icon: ''
-    }
+  public sidebarManager: RouteInfo[] = [
+    { path: '/manager/dashboard', title: 'Dashboard',  icon: 'dashboard', className: '' },
   ];
 
-  public sidebarDevelop: ISidebarInterface[] = [
-    {
-      url: '/develop/dashboard',
-      title: 'Dashboard',
-      icon: ''
-    }
+  public sidebarDevelop: RouteInfo[] = [
+    { path: '/developer/dashboard', title: 'Dashboard',  icon: 'dashboard', className: '' },
   ];
 
   constructor() { }

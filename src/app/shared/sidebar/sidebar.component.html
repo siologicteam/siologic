@@ -3,26 +3,14 @@
     <img [src]="'../../../assets/img/LogoBig.png'" alt="Logo">
     <p>Siologic</p>
   </div>
+
   <ul class="sidebar-links-items">
     <li *ngFor="let page of routesData">
       <a [routerLink]="page?.path" routerLinkActive="active">
-        {{ page?.title }}
-      </a>
-    </li>
-    <li *ngFor="let page of routesData">
-      <a [routerLink]="page?.path">
-        {{ page?.title }}
-      </a>
-    </li>
-    <li *ngFor="let page of routesData">
-      <a [routerLink]="page?.path">
-        {{ page?.title }}
-      </a>
-    </li>
-    <li *ngFor="let page of routesData">
-      <a [routerLink]="page?.path">
+        <i class="material-icons">{{ page?.icon }}</i>
         {{ page?.title }}
       </a>
     </li>
   </ul>
+
 </div>

@@ -1,5 +1,7 @@
+@import '~material-design-icons/iconfont/material-icons.css';
+
 .sidebar-panel{
-  width: 260px;
+  width: 280px;
   height: 100vh;
   box-shadow: 0 16px 38px -12px rgba(0,0,0,.56),
               0 4px 25px 0 rgba(0,0,0,.12),
@@ -53,6 +55,11 @@
         border-radius: 3px;
         transition: 150ms ease-in;
         font-weight: 300;
+
+        & > i{
+          margin-right: 10px;
+          width: 24px;
+        }
 
         &.active{
           background: #383a63;

@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 // Modules
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -69,6 +69,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     A11yModule,
     CdkStepperModule,
     CdkTableModule,
@@ -115,6 +116,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     FormsModule,
+    ReactiveFormsModule,
     A11yModule,
     CdkStepperModule,
     CdkTableModule,

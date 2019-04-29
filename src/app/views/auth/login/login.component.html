@@ -1,7 +1,13 @@
-<form>
-  <input type="text" placeholder="Test">
-  <input type="text" placeholder="Test">
-  <input type="text" placeholder="Test">
-  <input type="text" placeholder="Test">
-  <input type="submit" value="Btn" placeholder="eer">
-</form>
+<div class="login-container">
+  <form class="login-form" [formGroup]="loginForm">
+    <mat-form-field>
+      <input matInput placeholder="Enter email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Enter password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" (click)="login()">Login</button>
+  </form>
+</div>

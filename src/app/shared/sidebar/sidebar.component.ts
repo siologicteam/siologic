@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteInfo } from '../../interfaces/sidebar.interface';
+import { SidebarService } from '../../services/sidebar.service';
 
-declare interface RouteInfo {
-  path: string;
-  title: string;
-  icon: string;
-  class: string;
-}
-export const ROUTES: RouteInfo[] = [
-  { path: '/super-admin/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-  { path: '/super-admin/profile', title: 'User Profile',  icon: 'person', class: '' }
-];
 
 @Component({
   selector: 'app-sidebar',
@@ -18,11 +10,24 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
 
-  public routesData = ROUTES;
+  public routesData: RouteInfo[];
 
-  constructor() { }
+  constructor(
+    private _sidebarService: SidebarService
+  ) { }
 
   ngOnInit() {
-
+    const role = localStorage.getItem('role');
+    if (role === 'SUPER_ADMIN') {
+      this.routesData = this._sidebarService.sidebarSuperAdmin;
+    } else if (role === 'ADMIN') {
+      this.routesData = this._sidebarService.sidebarAdmin;
+    } else if (role === 'CLIENT') {
+      this.routesData = this._sidebarService.sidebarClient;
+    } else if (role === 'MANAGER') {
+      this.routesData = this._sidebarService.sidebarManager;
+    } else if (role === 'DEVELOPER') {
+      this.routesData = this._sidebarService.sidebarDevelop;
+    }
   }
 }

@@ -16,126 +16,126 @@ export class LandingComponent implements OnInit {
 
   ngOnInit() {
 
-    // setTimeout(() => {
-    //   jQuery('.side-nav li, .outer-nav li').click(function() {
-    //
-    //     if (!(jQuery(this).hasClass('is-active'))) {
-    //
-    //       const $this = jQuery(this);
-    //       const curActive = $this.parent().find('.is-active');
-    //       const curPos = $this.parent().children().index(curActive);
-    //       const nextPos = $this.parent().children().index($this);
-    //       const lastItem = jQuery(this).parent().children().length - 1;
-    //
-    //       updateNavs(nextPos);
-    //       updateContent(curPos, nextPos, lastItem);
-    //
-    //     }
-    //
-    //   });
-    //
-    //   jQuery('.cta').click(function() {
-    //
-    //     const curActive = jQuery('.side-nav').find('.is-active');
-    //     const curPos = jQuery('.side-nav').children().index(curActive);
-    //     const lastItem = jQuery('.side-nav').children().length - 1;
-    //     const nextPos = lastItem;
-    //
-    //     updateNavs(lastItem);
-    //     updateContent(curPos, nextPos, lastItem);
-    //
-    //   });
-    //
-    //   // swipe support for touch devices
-    //   const targetElement = document.getElementById('viewport');
-    //   const mc = new Hammer(targetElement);
-    //   mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    //   mc.on('swipeup swipedown', function(e) {
-    //
-    //     updateHelper(e);
-    //
-    //   });
-    //
-    //   jQuery(document).keyup(function(e) {
-    //
-    //     if (!(jQuery('.outer-nav').hasClass('is-vis'))) {
-    //       e.preventDefault();
-    //       updateHelper(e);
-    //     }
-    //
-    //   });
-    //
-    //   // determine scroll, swipe, and arrow key direction
-    //   function updateHelper(param) {
-    //
-    //     const curActive = jQuery('.side-nav').find('.is-active');
-    //     const curPos = jQuery('.side-nav').children().index(curActive);
-    //     const lastItem = jQuery('.side-nav').children().length - 1;
-    //     let nextPos = 0;
-    //
-    //     if (param.type === 'swipeup' || param.keyCode === 40 || param > 0) {
-    //       if (curPos !== lastItem) {
-    //         nextPos = curPos + 1;
-    //         updateNavs(nextPos);
-    //         updateContent(curPos, nextPos, lastItem);
-    //       } else {
-    //         updateNavs(nextPos);
-    //         updateContent(curPos, nextPos, lastItem);
-    //       }
-    //     } else if (param.type === 'swipedown' || param.keyCode === 38 || param < 0) {
-    //       if (curPos !== 0) {
-    //         nextPos = curPos - 1;
-    //         updateNavs(nextPos);
-    //         updateContent(curPos, nextPos, lastItem);
-    //       } else {
-    //         nextPos = lastItem;
-    //         updateNavs(nextPos);
-    //         updateContent(curPos, nextPos, lastItem);
-    //       }
-    //     }
-    //
-    //   }
-    //
-    //   // sync side and outer navigations
-    //   function updateNavs(nextPos) {
-    //
-    //     jQuery('.side-nav, .outer-nav').children().removeClass('is-active');
-    //     jQuery('.side-nav').children().eq(nextPos).addClass('is-active');
-    //     jQuery('.outer-nav').children().eq(nextPos).addClass('is-active');
-    //
-    //   }
-    //
-    //   // update main content area
-    //   function updateContent(curPos, nextPos, lastItem) {
-    //
-    //     jQuery('.main-content').children().removeClass('section--is-active');
-    //     jQuery('.main-content').children().eq(nextPos).addClass('section--is-active');
-    //     jQuery('.main-content .section').children().removeClass('section--next section--prev');
-    //
-    //     if (curPos === lastItem && nextPos === 0 || curPos === 0 && nextPos === lastItem) {
-    //       jQuery('.main-content .section').children().removeClass('section--next section--prev');
-    //     } else if (curPos < nextPos) {
-    //       jQuery('.main-content').children().eq(curPos).children().addClass('section--next');
-    //     } else {
-    //       jQuery('.main-content').children().eq(curPos).children().addClass('section--prev');
-    //     }
-    //
-    //     if (nextPos !== 0 && nextPos !== lastItem) {
-    //       jQuery('.header--cta').addClass('is-active');
-    //     } else {
-    //       jQuery('.header--cta').removeClass('is-active');
-    //     }
-    //
-    //   }
-    //
-    //   this.outerNav();
-    //   this.workSlider();
-    //   this.transitionLabels();
-    // }, 500);
-    //
-    // setTimeout(() => {
-    //   this.preloader = false;
-    // }, 3000);
+    setTimeout(() => {
+      jQuery('.side-nav li, .outer-nav li').click(function() {
+
+        if (!(jQuery(this).hasClass('is-active'))) {
+
+          const $this = jQuery(this);
+          const curActive = $this.parent().find('.is-active');
+          const curPos = $this.parent().children().index(curActive);
+          const nextPos = $this.parent().children().index($this);
+          const lastItem = jQuery(this).parent().children().length - 1;
+
+          updateNavs(nextPos);
+          updateContent(curPos, nextPos, lastItem);
+
+        }
+
+      });
+
+      jQuery('.cta').click(function() {
+
+        const curActive = jQuery('.side-nav').find('.is-active');
+        const curPos = jQuery('.side-nav').children().index(curActive);
+        const lastItem = jQuery('.side-nav').children().length - 1;
+        const nextPos = lastItem;
+
+        updateNavs(lastItem);
+        updateContent(curPos, nextPos, lastItem);
+
+      });
+
+      // swipe support for touch devices
+      const targetElement = document.getElementById('viewport');
+      const mc = new Hammer(targetElement);
+      mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+      mc.on('swipeup swipedown', function(e) {
+
+        updateHelper(e);
+
+      });
+
+      jQuery(document).keyup(function(e) {
+
+        if (!(jQuery('.outer-nav').hasClass('is-vis'))) {
+          e.preventDefault();
+          updateHelper(e);
+        }
+
+      });
+
+      // determine scroll, swipe, and arrow key direction
+      function updateHelper(param) {
+
+        const curActive = jQuery('.side-nav').find('.is-active');
+        const curPos = jQuery('.side-nav').children().index(curActive);
+        const lastItem = jQuery('.side-nav').children().length - 1;
+        let nextPos = 0;
+
+        if (param.type === 'swipeup' || param.keyCode === 40 || param > 0) {
+          if (curPos !== lastItem) {
+            nextPos = curPos + 1;
+            updateNavs(nextPos);
+            updateContent(curPos, nextPos, lastItem);
+          } else {
+            updateNavs(nextPos);
+            updateContent(curPos, nextPos, lastItem);
+          }
+        } else if (param.type === 'swipedown' || param.keyCode === 38 || param < 0) {
+          if (curPos !== 0) {
+            nextPos = curPos - 1;
+            updateNavs(nextPos);
+            updateContent(curPos, nextPos, lastItem);
+          } else {
+            nextPos = lastItem;
+            updateNavs(nextPos);
+            updateContent(curPos, nextPos, lastItem);
+          }
+        }
+
+      }
+
+      // sync side and outer navigations
+      function updateNavs(nextPos) {
+
+        jQuery('.side-nav, .outer-nav').children().removeClass('is-active');
+        jQuery('.side-nav').children().eq(nextPos).addClass('is-active');
+        jQuery('.outer-nav').children().eq(nextPos).addClass('is-active');
+
+      }
+
+      // update main content area
+      function updateContent(curPos, nextPos, lastItem) {
+
+        jQuery('.main-content').children().removeClass('section--is-active');
+        jQuery('.main-content').children().eq(nextPos).addClass('section--is-active');
+        jQuery('.main-content .section').children().removeClass('section--next section--prev');
+
+        if (curPos === lastItem && nextPos === 0 || curPos === 0 && nextPos === lastItem) {
+          jQuery('.main-content .section').children().removeClass('section--next section--prev');
+        } else if (curPos < nextPos) {
+          jQuery('.main-content').children().eq(curPos).children().addClass('section--next');
+        } else {
+          jQuery('.main-content').children().eq(curPos).children().addClass('section--prev');
+        }
+
+        if (nextPos !== 0 && nextPos !== lastItem) {
+          jQuery('.header--cta').addClass('is-active');
+        } else {
+          jQuery('.header--cta').removeClass('is-active');
+        }
+
+      }
+
+      this.outerNav();
+      this.workSlider();
+      this.transitionLabels();
+    }, 500);
+
+    setTimeout(() => {
+      this.preloader = false;
+    }, 3000);
   }
 
   public outerNav() {
